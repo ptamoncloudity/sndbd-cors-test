@@ -2,8 +2,216 @@
 <html>
 <body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+    <!--  If necessary, please modify the charset parameter to specify the        -->
+    <!--  character set of your HTML page.                                        -->
+    <!--  ----------------------------------------------------------------------  -->
+
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: Please add the following <FORM> element to your page.             -->
+    <!--  ----------------------------------------------------------------------  -->
+
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+
+    <input type=hidden name="orgid" value="00D0Y000001kRD5">
+    <input type=hidden name="retURL" value="http://">
+    <input type=hidden name="recordType" id="recordType" value="0120Y000000Kk0C">
+
+    <!--  ----------------------------------------------------------------------  -->
+    <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+    <!--  these lines if you wish to test in debug mode.                          -->
+    <!--  <input type="hidden" name="debug" value=1>                              -->
+    <!--  <input type="hidden" name="debugEmail"                                  -->
+    <!--  value="dev+sindbadprod@cloudity.pl">                                    -->
+    <!--  ----------------------------------------------------------------------  -->
+
+    <label for="name">Nazwa kontaktu</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
+
+    <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+
+    <label for="phone">Telefon</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+
+    <label for="subject">Temat</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+
+    <label for="description">Opis</label><textarea name="description"></textarea><br>
+
+    <label for="company">Firma</label><input  id="company" maxlength="80" name="company" size="20" type="text" /><br>
+
+    <label for="type">Typ</label><select  id="type" name="type"><option value="">--Brak--</option><option value="Ticket">Bilet</option>
+    <option value="Question">Pytanie</option>
+    <option value="Excess Baggage">Nadbagaż</option>
+    <option value="Luggage">Bagaż</option>
+    <option value="Driver">Kierowca</option>
+    <option value="Pilot">Pilot</option>
+    <option value="Bus">Autokar</option>
+    <option value="Travel">Podróż</option>
+    <option value="KSK">KSK</option>
+    <option value="Agent">Agent</option>
+    <option value="Official Letter">Pismo urzędowe</option>
+    <option value="Other">Inny</option>
+    </select><br>
+
+    <label for="status">Stan</label><select  id="status" name="status"><option value="">--Brak--</option><option value="New">Nowa</option>
+    <option value="Working">Przypisana</option>
+    <option value="Transferred To Carrier">Przewoźnik</option>
+    <option value="Consideration">Rozpatrywana</option>
+    <option value="Completing">Uzupełnienie</option>
+    <option value="Appeal From Decision">Odwołanie</option>
+    <option value="Returned To The Client">Zwrócona do Klienta</option>
+    <option value="Positive Consideration">Uznana</option>
+    <option value="Negative Consideration">Nieuznana</option>
+    <option value="No Completing">Brak uzupełnienia</option>
+    <option value="Closed">Zamknięta</option>
+    <option value="ClosedDataUpdateRequired">Zamknięta - do uzupełnienia</option>
+    <option value="Duplicate">Duplikat</option>
+    </select><br>
+
+    <label for="reason">Przyczyna sprawy</label><select  id="reason" name="reason"><option value="">--Brak--</option><option value="User didn&#39;t attend training">User didn&#39;t attend training</option>
+    <option value="Complex functionality">Complex functionality</option>
+    <option value="Existing problem">Existing problem</option>
+    <option value="Instructions not clear">Instructions not clear</option>
+    <option value="New problem">New problem</option>
+    </select><br>
+
+    <label for="priority">Priorytet</label><select  id="priority" name="priority"><option value="">--Brak--</option><option value="High">Wysoki</option>
+    <option value="Medium">Standardowy</option>
+    <option value="Low">Niski</option>
+    </select><br>
+
+    <label for="currency"><span class="assistiveText">*</span>Waluta sprawy</label><select  id="currency" name="currency"><option value="CHF">CHF - Frank szwajcarski</option>
+    <option value="DKK">DKK - Korona duńska</option>
+    <option value="EUR">EUR - Euro</option>
+    <option value="GBP">GBP - Funt brytyjski</option>
+    <option value="NOK">NOK - Korona norweska</option>
+    <option value="PLN" selected="selected">PLN - Złoty polski</option>
+    <option value="SEK">SEK - Korona szwedzka</option>
+    <option value="UAH">UAH - Hrywna ukraińska</option>
+    </select><br>
+
+    <label for="recordType">Typ rekordu sprawy</label><select  id="recordType" name="recordType"><option value="">--Brak--</option><option value="0120Y000000Kk0B">Agent&#39;s Case</option>
+    <option value="0120Y000000Kk0C">Client&#39;s Case</option>
+    <option value="0120Y000000Kk0D">Complaint</option>
+    </select><br>
+
+    Zgłoszenie z sądu:<input  id="00N0Y00000S3AVy" name="00N0Y00000S3AVy" type="checkbox" value="1" /><br>
+
+    Zgłoszenie z policji:<input  id="00N0Y00000S3AVz" name="00N0Y00000S3AVz" type="checkbox" value="1" /><br>
+
+    Automatyczne zamknięcie Sprawy:<input  id="00N0Y00000S3AW3" name="00N0Y00000S3AW3" type="checkbox" value="1" /><br>
+
+    Roszczenie % (Klient):<input  id="00N0Y00000S3AW4" name="00N0Y00000S3AW4" size="20" type="text" /><br>
+
+    Roszczenie % (propozycja):<input  id="00N0Y00000S3AW5" name="00N0Y00000S3AW5" size="20" type="text" /><br>
+
+    Roszczenie (propozycja):<select  id="00N0Y00000S3AW6" name="00N0Y00000S3AW6" title="Roszczenie (propozycja)"><option value="">--Brak--</option><option value="Discount">Zniżka</option>
+    <option value="Ticket Return">Zwrot biletu</option>
+    <option value="Cash Refund">Zwrot gotówki</option>
+    <option value="Compensation">Rekompensata</option>
+    <option value="Explanation">Wyjaśnienia</option>
+    <option value="Other">Inne</option>
+    </select><br>
+
+    Wartość roszczenia (propozycja):<input  id="00N0Y00000S3AW7" name="00N0Y00000S3AW7" size="20" type="text" /><br>
+
+    Wartość roszczenia (Klient):<input  id="00N0Y00000S3AW8" name="00N0Y00000S3AW8" size="20" type="text" /><br>
+
+    Roszczenie (Klient):<select  id="00N0Y00000S3AW9" name="00N0Y00000S3AW9" title="Roszczenie (Klient)"><option value="">--Brak--</option><option value="Discount">Zniżka</option>
+    <option value="Ticket Return">Zwrot biletu</option>
+    <option value="Cash Refund">Zwrot gotówki</option>
+    <option value="Compensation">Rekompensata</option>
+    <option value="Explanation">Wyjaśnienia</option>
+    <option value="Other">Inne</option>
+    </select><br>
+
+    Klient wysłał oficjalne pismo:<input  id="00N0Y00000S3AWA" name="00N0Y00000S3AWA" type="checkbox" value="1" /><br>
+
+    Uwagi:<textarea  id="00N0Y00000S3AWB" name="00N0Y00000S3AWB" type="text" wrap="soft"></textarea><br>
+
+    Braki formalne (checkbox):<input  id="00N0Y00000S3AWC" name="00N0Y00000S3AWC" type="checkbox" value="1" /><br>
+
+    Braki formalne:<select  id="00N0Y00000S3AWD" name="00N0Y00000S3AWD" title="Braki formalne"><option value="">--Brak--</option><option value="Person Unauthorised">Brak pełnomocnictwa</option>
+    <option value="Damage Report">Protokół uszkodzenia</option>
+    <option value="Luggage Bills">Rachunki (walizka)</option>
+    </select><br>
+
+    Utwórz zadanie dla właściciela:<input  id="00N0Y00000S3AWE" name="00N0Y00000S3AWE" type="checkbox" value="1" /><br>
+
+    Poziom zadowolenia:<select  id="00N0Y00000S3AWF" name="00N0Y00000S3AWF" title="Poziom zadowolenia"><option value="">--Brak--</option><option value="Happy">Szczęśliwy</option>
+    <option value="Neutral">Neutralny</option>
+    <option value="Mad">Zdenerwowany</option>
+    </select><br>
+
+    Data wpłynięcia:<span class="dateInput"><input  id="00N0Y00000S3AWG" name="00N0Y00000S3AWG" size="20" type="text" /></span><br>
+
+    Nieuznana (checkbox):<input  id="00N0Y00000S3AWL" name="00N0Y00000S3AWL" type="checkbox" value="1" /><br>
+
+    Uznana (checkbox):<input  id="00N0Y00000S3AWO" name="00N0Y00000S3AWO" type="checkbox" value="1" /><br>
+
+    Termin odpowiedzi:<span class="dateInput dateOnlyInput"><input  id="00N0Y00000S3AWQ" name="00N0Y00000S3AWQ" size="12" type="text" /></span><br>
+
+    Odpowiedź (ilość dni):<select  id="00N0Y00000S3AWR" name="00N0Y00000S3AWR" title="Odpowiedź (ilość dni)"><option value="">--Brak--</option><option value="1 day">1 dzień</option>
+    <option value="2 days">2 dni</option>
+    <option value="3 days">3 dni</option>
+    <option value="4 days">4 dni</option>
+    <option value="5 days">5 dni</option>
+    <option value="6 days">6 dni</option>
+    <option value="7 days">7 dni</option>
+    <option value="8 days">8 dni</option>
+    <option value="9 days">9 dni</option>
+    <option value="10 days">10 dni</option>
+    <option value="11 days">11 dni</option>
+    <option value="12 days">12 dni</option>
+    <option value="13 days">13 dni</option>
+    <option value="14 days">14 dni</option>
+    <option value="15 days">15 dni</option>
+    <option value="16 days">16 dni</option>
+    <option value="17 days">17 dni</option>
+    <option value="18 days">18 dni</option>
+    <option value="19 days">19 dni</option>
+    <option value="20 days">20 dni</option>
+    <option value="21 days">21 dni</option>
+    <option value="22 days">22 dni</option>
+    <option value="23 days">23 dni</option>
+    <option value="24 days">24 dni</option>
+    <option value="25 days">25 dni</option>
+    <option value="26 days">26 dni</option>
+    <option value="27 days">27 dni</option>
+    <option value="28 days">28 dni</option>
+    <option value="29 days">29 dni</option>
+    </select><br>
+
+    Typ zadania:<select  id="00N0Y00000S3AWT" name="00N0Y00000S3AWT" title="Typ zadania"><option value="">--Brak--</option><option value="Ticket&#39;s Validity Extension">Przedłużenie terminu ważności</option>
+    <option value="Send Information To Pilots (Due To Lost Luggage)">Komunikat dla pilotów z dalej linii (zagubiony bagaż)</option>
+    <option value="Verify If A Receipt Was Given">Zweryfikowanie czy wydano pokwitowanie</option>
+    <option value="Change To Complaint">Przekształcenie sprawy w reklamację</option>
+    <option value="Apologies">Przeprosiny</option>
+    </select><br>
+
+    Typ sprawy (uzupełnienie):<select  id="00N0Y00000S3AWW" name="00N0Y00000S3AWW" title="Typ sprawy (uzupełnienie)"><option value="">--Brak--</option><option value="Ticket Return">Zwrot biletu</option>
+    <option value="Date Change">Zmiana daty</option>
+    <option value="Data Change">Zmiana danych</option>
+    <option value="Duplicate">Duplikat</option>
+    <option value="Validity Duration">Termin ważności</option>
+    <option value="Confirmation">Potwierdzenie</option>
+    <option value="Damaged Luggage">Uszkodzony bagaż</option>
+    <option value="Lost Luggage">Zgubiony bagaż</option>
+    <option value="Poor Comfort">Niski komfort</option>
+    <option value="Delay">Opóźnienie</option>
+    <option value="Compliment">Pochwała</option>
+    <option value="Complaint">Skarga</option>
+    <option value="Found Luggage">Znaleziony bagaż</option>
+    <option value="Delivered After Time">Dostarczony po czasie</option>
+    <option value="Excess Luggage">Nadbagaż</option>
+    <option value="Hand Luggage">Bagaż podręczny</option>
+    <option value="Other">Inny</option>
+    </select><br>
+
+    <input type="submit" name="submit">
+
+    </form>
 
 </body>
 </html>
